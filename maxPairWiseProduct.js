@@ -19,12 +19,12 @@ setTimeout( function() {
         integers.push(parseInt(integersArray[i]));
     }
 
-    mainFn(numIntegers, integers);
+    console.log(findMaxPairWiseProduct(numIntegers, integers));
     process.exit();
 }, 100);
 
 
-function mainFn(numIntegers, integers) {
+function findMaxPairWiseProduct(numIntegers, integers) {
     var largest = 0;
     var secondLargest = 0;
 
@@ -37,5 +37,5 @@ function mainFn(numIntegers, integers) {
         }
     }
 
-    console.log(largest * secondLargest);
+    return largest * secondLargest;
 }
