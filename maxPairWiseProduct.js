@@ -25,15 +25,17 @@ setTimeout( function() {
 
 
 function mainFn(numIntegers, integers) {
-    var largestCombo = 0;
+    var largest = 0;
+    var secondLargest = 0;
 
     for (var i = 0; i < integers.length; i++) {
-        for (var j = i + 1; j < integers.length; j++) {
-            if (integers[i] * integers[j] > largestCombo) {
-                largestCombo = integers[i] * integers[j];
-            }
+        if (integers[i] >= largest) {
+            secondLargest = largest;
+            largest = integers[i];
+        } else if (integers[i] >= secondLargest) {
+            secondLargest = integers[i] 
         }
     }
 
-    console.log(largestCombo);
+    console.log(largest * secondLargest);
 }
